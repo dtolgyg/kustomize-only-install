@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: argocd-team-a
+
+resources:
+  - ../../base/namespace-install
+
+patches:
+- path: overlays/disable-dex.yaml
+- path: overlays/argocd-cmd-params-cm.yaml

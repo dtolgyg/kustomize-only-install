@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cmd-params-cm
+data:
+  ### Enable Apps in any namespace for both controllers
+  application.namespaces: 'argocd-team-a'
+  applicationsetcontroller.namespaces: 'argocd-team-a'
+  applicationsetcontroller.allowed.scm.providers: 'https://github.com/'
